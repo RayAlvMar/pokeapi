@@ -1,14 +1,24 @@
 {% extends "base.html" %}
 
-{% block title %}Calculadora de IMC{% endblock %}
+{% block title %}Pokekeapi{% endblock %}
 
 {% block content %}
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success" type="submit">Search</button>
+
+<div class="text-center mt-4">
+  <img src="{{ url_for('static', filename='img/pikachu.png') }}" 
+       alt="Pikachu" 
+       class="img-fluid" 
+       style="max-width: 150px;">
+</div>
+
+<nav class="navbar bg-primary rounded-4 shadow p-3 d-flex justify-content-center align-items-center mt-3" 
+     style="max-width: 600px; margin: 0 auto;">
+  <div class="container-fluid justify-content-center">
+    <form class="d-flex" role="search" style="max-width: 400px; margin: 0 auto;">
+      <input class="form-control me-2" type="search" placeholder="Buscar Pokémon..." aria-label="Search">
+      <button class="btn btn-warning fw-bold" type="submit">Buscar</button>
     </form>
   </div>
 </nav>
+
 {% endblock %}
